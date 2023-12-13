@@ -121,3 +121,31 @@ teacher_obj = Teacher(5.8, 'backend')
 print(student_obj)
 print(manager_obj)
 print(teacher_obj)
+
+
+# operator overloading 
+class A:
+    def __init__(self, a:int):
+        self.a = a
+
+    def __add__(self, obj):
+        return self.a + obj.a
+
+    def __sub__(self, obj_1):
+        pass
+
+    def __mul__(self, obj):
+        pass
+
+    def __lt__(self, obj):
+        pass
+
+    def __gt__(self, obj):
+        pass
+
+obj = A(4)
+obj_1 = A(5)
+# print(obj + obj_1)
+# print(obj > obj_1)
+print(obj ** obj_1)
+print(obj - obj_1)
