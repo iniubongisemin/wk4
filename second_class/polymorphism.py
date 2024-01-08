@@ -44,9 +44,9 @@ class Teacher(Human):
         super().__init__(height)
 
     def create_curriculum(self):
-        print('teacher create course curriculum')
+        print('the teacher is responsible for creating course curriculum')
 
-    def __str__(self) -> str:
+    def __str__(self) -> str:                  
         return f'teacher obj for course {self.course}'
     
 student_obj = Student(5.7, 'john', 'male')
@@ -64,6 +64,9 @@ class A:
 
     def __add__(self, obj):
         return self.a + obj.a
+    
+    def __sub__(self, obj):
+        return self.a - obj.a
 
     def __sub__(self, obj_1):
         pass
@@ -77,9 +80,9 @@ class A:
     def __gt__(self, obj):
         pass
 
-obj = A(4)
+obj = A(6)
 obj_1 = A(5)
-# print(obj + obj_1)
+print(obj + obj_1)
 # print(obj > obj_1)
-print(obj ** obj_1)
+# print(obj ** obj_1)
 print(obj - obj_1)

@@ -3,7 +3,7 @@
 # instance attribute is created in the "constructor"
 class Person:
     leg = 2 # class attribute 
-    def __init__(self, name, color): # self here refers to the person object
+    def __init__(self, name, color) -> None: # self here refers to the person object
         self.name = name # instance attribute
         self.color = color # instance attribute
 
@@ -38,9 +38,8 @@ class Phone:
 iPhone = Phone('mtn', 'wireless_charging', 'iPhone-X')
 samsung = Phone('airtel', 'cable_charging', 'galaxy A32')
 
-# print(iPhone.phone_model, iPhone.camera, iPhone.charging)
-# print(samsung.phone_model, samsung.camera, samsung.charging)
-
+print(iPhone.phone_model, iPhone.camera, iPhone.charging)
+print(samsung.phone_model, samsung.camera, samsung.charging)
 
 # constructors in python
 # NB: your class can take as many instance methods as possible 
@@ -67,20 +66,20 @@ class School:
             if course == c:
                 print(f'congratulations you\'ve been admitted into the {c} course')
             else:
-                print(f'sorry we do not have {c} course in our program yet')
+                print(f'sorry we do not have {course} course in our program yet')
 
 univel = School('univelcity', '42 montgomery road, yaba')
 gomycode = School('gomycode', '230 Herbert Macaulay way, alagomeji')
 decagon = School('decagon', 'orchid road, lekki peninsula II')
-# print(univel.address)
-# print(univel.admission('john'))
-# print(univel.course_option('backend'))
-# print(gomycode.address)
-# print(gomycode.admission('stacy'))
-# print(gomycode.course_option('frontend'))
-# print(decagon.address)
-# print(decagon.admission('kazeem'))
-# print(decagon.course_option('software engineering'))
+print(univel.address)
+print(univel.admission('john'))
+print(univel.course_option('backend'))
+print(gomycode.address)
+print(gomycode.admission('stacy'))
+print(gomycode.course_option('frontend'))
+print(decagon.address)
+print(decagon.admission('kazeem'))
+print(decagon.course_option('software engineering'))
 
 # example
 class Customer:
